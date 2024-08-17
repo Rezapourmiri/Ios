@@ -1,4 +1,4 @@
-name: Modify guid.dart
+name: iOS-ipa-build
 
 on:
     workflow_dispatch:
@@ -39,7 +39,7 @@ jobs:
 
             - run: |
                 FILE_PATH=$(find ~/.pub-cache -name guid.dart)
-                sed -i 's/UnmodifiableUint8ListView/Uint8List/g' $FILE_PATH
+                sed -i '' 's/UnmodifiableUint8ListView/Uint8List/g' $FILE_PATH
 
             - run: flutter build ios --release --no-codesign
 
