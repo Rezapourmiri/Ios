@@ -29,9 +29,13 @@ jobs:
             - run: pod install
               working-directory: ios
 
-            - run: flutter pub upgrade win32
-
             - run: flutter channel stable
+
+            - run: flutter upgrade
+
+            - run: flutter pub upgrade
+
+            - run: flutter clean
 
             - run: flutter build ios --release --no-codesign
 
