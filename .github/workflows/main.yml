@@ -19,6 +19,8 @@ jobs:
             - run: pod repo update
               working-directory: ios
             
+            - run: pod update Firebase/Analytics
+            
             - run: flutter build ios --release --no-codesign
 
             - run: mkdir Payload
