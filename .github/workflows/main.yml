@@ -29,7 +29,11 @@ jobs:
             - run: pod install
               working-directory: ios
 
+            - run: flutter pub cache clean
+
             - run: flutter channel stable
+
+            - run: flutter pub get
 
             - run: flutter upgrade
 
