@@ -40,7 +40,7 @@ jobs:
             - run: |
                 FILE_PATH=$(find ~/.pub-cache -name guid.dart)
                 sed -i '' 's/UnmodifiableUint8ListView/Uint8List/g' $FILE_PATH
-                sed -i '' 's/Uint8List bytes = ...;/Uint8List bytes = ...;\nint firstByte = bytes[0];/g' $FILE_PATH
+                sed -i '' 's/someFunction(bytes)/int firstByte = bytes[0];\nsomeFunction(firstByte)/g' $FILE_PATH
 
             - run: flutter build ios --release --no-codesign
 
