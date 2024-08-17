@@ -32,11 +32,11 @@ class FloatingButton extends StatelessWidget {
 
     BoxDecoration decoration = buttonShape == FloatingButtonShape.circular
         ? BoxDecoration(
-            color: color ?? Theme.of(context).backgroundColor,
+            color: color ?? Theme.of(context).colorScheme.background,
             shape: BoxShape.circle,
             boxShadow: shadow)
         : BoxDecoration(
-            color: color ?? Theme.of(context).backgroundColor,
+            color: color ?? Theme.of(context).colorScheme.background,
             borderRadius: BorderRadius.circular(10),
             boxShadow: shadow);
 
