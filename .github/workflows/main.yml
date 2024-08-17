@@ -14,13 +14,23 @@ jobs:
               with:
                 channel: 'stable'
                 architecture: x64
+
             - run: flutter pub get
             
             - run: pod repo update
               working-directory: ios
             
             - run: pod update Firebase/Analytics
-            
+              working-directory: ios
+
+            - run: rm -rf ios/Pods ios/Podfile.lock
+              working-directory: ios
+
+            - run: pod install
+              working-directory: ios
+
+            - run: flutter clean
+
             - run: flutter build ios --release --no-codesign
 
             - run: mkdir Payload
