@@ -72,9 +72,9 @@ class _OnCallFormScreenState extends State<OnCallFormScreen> {
         Container(
           width: PlatformHelper.screenWidth * 0.01,
         ),
-        Expanded(
+        const Expanded(
           child: Row(
-            children: const [
+            children: [
               SegmentButton("CDC Panels"),
               SegmentButton("Vitamines"),
               SegmentButton("Lab Work"),
@@ -92,9 +92,9 @@ class _OnCallFormScreenState extends State<OnCallFormScreen> {
         Container(
           width: PlatformHelper.screenWidth * 0.018,
         ),
-        Expanded(
+        const Expanded(
           child: Row(
-            children: const [
+            children: [
               SegmentButton("Front"),
               SegmentButton("Left"),
               SegmentButton("Right"),
@@ -122,8 +122,8 @@ class _OnCallFormScreenState extends State<OnCallFormScreen> {
     return Padding(
       padding:
           EdgeInsets.symmetric(vertical: PlatformHelper.screenHeight * 0.01),
-      child: Row(
-        children: const [
+      child: const Row(
+        children: [
           SegmentButton("Yes"),
           SegmentButton("No"),
         ],
@@ -146,7 +146,7 @@ class _OnCallFormScreenState extends State<OnCallFormScreen> {
           height: PlatformHelper.screenHeight * 0.05,
           width: PlatformHelper.screenWidth * 0.3,
           decoration: BoxDecoration(
-            color: Theme.of(context).backgroundColor,
+            color: Theme.of(context).colorScheme.background,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
@@ -175,7 +175,7 @@ class _OnCallFormScreenState extends State<OnCallFormScreen> {
       height: PlatformHelper.screenHeight * 0.15,
       width: PlatformHelper.screenWidth * 0.5,
       decoration: BoxDecoration(
-        color: Theme.of(context).backgroundColor,
+        color: Theme.of(context).colorScheme.background,
         borderRadius: BorderRadius.circular(10),
       ),
     );

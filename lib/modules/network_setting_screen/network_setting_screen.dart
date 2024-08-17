@@ -20,7 +20,7 @@ class _NetworkSettingScreenState extends State<NetworkSettingScreen> {
 
   TextStyle? get mainTextStyle => Theme.of(context)
       .textTheme
-      .headline2
+      .displayMedium
       ?.copyWith(fontSize: StringHelper.generateProportionateFontSize(17));
 
   @override
@@ -41,7 +41,7 @@ class _NetworkSettingScreenState extends State<NetworkSettingScreen> {
     return AppBar(
       title: Text(
         "Network Setting",
-        style: Theme.of(context).textTheme.headline1,
+        style: Theme.of(context).textTheme.displayLarge,
       ),
       leadingWidth: PlatformHelper.screenWidth * 0.24,
       leading: CupertinoButton(
@@ -49,7 +49,7 @@ class _NetworkSettingScreenState extends State<NetworkSettingScreen> {
             "Close",
             style: Theme.of(context)
                 .textTheme
-                .headline2
+                .displayMedium
                 ?.copyWith(color: CupertinoColors.activeBlue),
           ),
           onPressed: () {
@@ -58,21 +58,21 @@ class _NetworkSettingScreenState extends State<NetworkSettingScreen> {
       actions: [
         CupertinoButton(
             key: const Key("saveButton"),
+            onPressed: _bloc.saveChanges,
             child: Text(
               "Save",
               style: Theme.of(context)
                   .textTheme
-                  .headline2
+                  .displayMedium
                   ?.copyWith(color: CupertinoColors.activeBlue),
-            ),
-            onPressed: _bloc.saveChanges)
+            ))
       ],
     );
   }
 
   Widget _mainContent() {
     return Container(
-        color: Theme.of(context).backgroundColor,
+        color: Theme.of(context).colorScheme.background,
         child: ListView(
           children: [
             ListTile(
@@ -101,7 +101,7 @@ class _NetworkSettingScreenState extends State<NetworkSettingScreen> {
             _listTileButton(
                 "Reset To Prod Setting", _bloc.resetToProdEnvironment),
             Divider(
-              color: Theme.of(context).backgroundColor,
+              color: Theme.of(context).colorScheme.background,
               height: 1.0,
             ),
             _listTileButton(
@@ -173,9 +173,12 @@ class _NetworkSettingScreenState extends State<NetworkSettingScreen> {
   }
 
   Widget _hintTextBox(String title) {
-    TextStyle? hintTextStyle = Theme.of(context).textTheme.headline2?.copyWith(
-        fontSize: StringHelper.generateProportionateFontSize(15),
-        color: corduroy);
+    TextStyle? hintTextStyle = Theme.of(context)
+        .textTheme
+        .displayMedium
+        ?.copyWith(
+            fontSize: StringHelper.generateProportionateFontSize(15),
+            color: corduroy);
     return Padding(
       padding: EdgeInsets.symmetric(
           vertical: PlatformHelper.screenHeight * 0.02,
