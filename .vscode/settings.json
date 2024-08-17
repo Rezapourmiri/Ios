@@ -1,0 +1,9 @@
+{
+    "azdoPullRequests.orgUrl": "https://dev.azure.com/borna-corp",
+    "azdoPullRequests.projectName": "payroll",
+    "files.exclude": {
+        "**/build":true
+    },
+    "workbench.experimental.settingsProfiles.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

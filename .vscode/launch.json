@@ -1,0 +1,49 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "flutter_application",
+      "request": "launch",
+      // "deviceId": "00008110-001A4D922288401E",
+      "deviceId": "R58M95CGL9H",
+      // "deviceId": "emulator-5554",
+      // "deviceId": "00d85e270904",
+      // "deviceId": "emulator-5556",
+      // "deviceId": "emulator-5558",
+      // "deviceId": "91E37505-15AB-42E9-900E-EC843589B085",
+      // "deviceId": "SYK4C19B23015672",
+      // "deviceId": "67cbc5310305",
+      // "deviceId": "RFCT70KHW9M",
+      "flutterMode": "debug",
+      "type": "dart"
+    },
+    {
+      "name": "Release_flutter_application",
+      "request": "launch",
+      "deviceId": "SYK4C19B23015672",
+      // "deviceId": "RFCT70KHW9M",
+      // "deviceId": "00008110-001A4D922288401E",
+      // "deviceId": "47f53e7d",
+      // "deviceId": "R58NC37T7QF",
+      // "deviceId": "8f80924a",
+      "flutterMode": "release",
+      "type": "dart"
+    },
+    {
+      "name": "flutter_application (profile mode)",
+      "request": "launch",
+      // "deviceId": "47f53e7d",
+      // "deviceId": "RFCT70KHW9M",
+      "deviceId": "SYK4C19B23015672",
+      "type": "dart",
+      "flutterMode": "profile"
+    }
+  ]
+}
+
+// adb -s emulator-5554 shell 'am start -W -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d "https://hr.optimasoft.ir/borna/pr"'
+
+// https://developers.google.com/digital-asset-links/tools/generator

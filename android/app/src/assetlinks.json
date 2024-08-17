@@ -1,0 +1,29 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.payroll.flutter_patient",
+            "sha256_cert_fingerprints": [
+                "97:95:46:18:F1:21:13:D4:1C:9F:90:7E:00:38:A9:02:87:64:FF:F9:0D:70:59:A3:4C:A9:D1:B3:33:D0:56:7F"
+            ]
+        }
+    },
+{
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.optimasoft.payrollStage",
+            "sha256_cert_fingerprints": [
+                "94:CB:F4:8A:94:77:DE:7B:CE:39:1E:A9:A4:50:C9:CC:D7:BC:85:A5:0A:42:9F:1C:6D:45:A4:E6:8A:6B:DF:09"
+            ]
+        }
+    }
+
+]
+
+
