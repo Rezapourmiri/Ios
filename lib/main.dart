@@ -150,7 +150,7 @@ class Payroll extends StatelessWidget {
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Colors.white),
         primaryColor: darkGrey,
-        backgroundColor: doctorWhite,
+        //backgroundColor: doctorWhite,
         textTheme: const TextTheme(
             /*headline1: TextStyle(
               color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
