@@ -1,4 +1,4 @@
-name: iOS-ipa-build
+name: Modify guid.dart
 
 on:
     workflow_dispatch:
@@ -29,17 +29,17 @@ jobs:
             - run: pod install
               working-directory: ios
 
-            - run: flutter pub cache clean
-
             - run: flutter channel stable
-
-            - run: flutter pub get
 
             - run: flutter upgrade
 
             - run: flutter pub upgrade
 
             - run: flutter clean
+
+            - run: |
+                FILE_PATH=$(find ~/.pub-cache -name guid.dart)
+                sed -i 's/UnmodifiableUint8ListView/Uint8List/g' $FILE_PATH
 
             - run: flutter build ios --release --no-codesign
 
