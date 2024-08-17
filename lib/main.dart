@@ -152,11 +152,11 @@ class Payroll extends StatelessWidget {
         primaryColor: darkGrey,
         backgroundColor: doctorWhite,
         textTheme: const TextTheme(
-          headline1: TextStyle(
+            /*headline1: TextStyle(
               color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
           headline2: TextStyle(
-              color: Colors.black, fontSize: 17, fontWeight: FontWeight.w500),
-        ),
+              color: Colors.black, fontSize: 17, fontWeight: FontWeight.w500),*/
+            ),
       ),
       navigatorKey: GetIt.instance.get<NavigationService>().navigatorKey,
       initialRoute: Navigator.defaultRouteName,
