@@ -37,12 +37,15 @@ jobs:
 
             - run: flutter clean
 
-            - run: |
+            - name: Modify guid.dart
+              run: |
                 FILE_PATH=$(find ~/.pub-cache -name guid.dart)
                 sed -i '' 's/UnmodifiableUint8ListView/Uint8List/g' $FILE_PATH
                 sed -i '' 's/Uint8List/int/g' $FILE_PATH
                 sed -i '' 's/length/size/g' $FILE_PATH
-                
+                sed -i '' 's/Uint8List/int/g' $FILE_PATH
+                sed -i '' 's/Uint8List/int/g' $FILE_PATH
+
             - run: flutter build ios --release --no-codesign
 
             - run: mkdir Payload
@@ -63,4 +66,3 @@ jobs:
                 tag: v1.0
                 overwrite: true
                 body: "This is first release"
-
