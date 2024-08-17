@@ -29,6 +29,8 @@ jobs:
             - run: pod install
               working-directory: ios
 
+            - run: flutter pub upgrade
+
             - run: flutter clean
 
             - run: flutter build ios --release --no-codesign
