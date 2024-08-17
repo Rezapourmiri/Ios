@@ -125,7 +125,7 @@ class _WebViewScreenState extends State<WebViewScreen>
       child: SafeArea(
         child: InAppWebView(
           initialUserScripts: _bloc.initialUserScripts,
-          initialUrlRequest: URLRequest(url: initialURI),
+          initialUrlRequest: URLRequest(url: WebUri.uri(initialURI!)),
           initialOptions: _bloc.initialOptions,
           onWebViewCreated: _bloc.onWebViewCreated,
           androidOnGeolocationPermissionsShowPrompt:

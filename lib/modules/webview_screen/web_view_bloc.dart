@@ -362,7 +362,7 @@ class WebViewBloc {
     }
     webViewController.loadUrl(
       urlRequest: URLRequest(
-        url: url,
+        url: WebUri.uri(url),
       ),
     );
   }

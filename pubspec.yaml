@@ -42,7 +42,7 @@ dependencies:
   get_it: 
   shared_preferences: 
   flutter_inappwebview: 
-  local_auth: ^2.1.2 
+  local_auth: ^2.3.0 
   location: ^4.4.0 
   url_launcher: ^6.1.7 #**************************************** needs to develope in permession
   geolocator: ^9.0.2
