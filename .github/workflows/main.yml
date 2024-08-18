@@ -14,7 +14,6 @@ jobs:
               with:
                 channel: 'stable'
                 architecture: x64
-
             - run: flutter pub get
             
             - run: pod repo update
@@ -22,30 +21,13 @@ jobs:
             
             - run: pod update Firebase/Analytics
               working-directory: ios
-
-            - run: rm -rf ios/Pods ios/Podfile.lock
-              working-directory: ios
-
-            - run: pod install
-              working-directory: ios
+              
+            - run: flutter pub cache clean
 
             - run: flutter channel stable
-
-            - run: flutter upgrade
-
-            - run: flutter pub upgrade
-
-            - run: flutter clean
-
-            - name: Modify guid.dart
-              run: |
-                FILE_PATH=$(find ~/.pub-cache -name guid.dart)
-                sed -i '' 's/UnmodifiableUint8ListView/Uint8List/g' $FILE_PATH
-                sed -i '' 's/Uint8List/int/g' $FILE_PATH
-                sed -i '' 's/length/size/g' $FILE_PATH
-                sed -i '' 's/Uint8List/int/g' $FILE_PATH
-                sed -i '' 's/Uint8List/int/g' $FILE_PATH
-
+            
+            - run: flutter pub get  
+            
             - run: flutter build ios --release --no-codesign
 
             - run: mkdir Payload
